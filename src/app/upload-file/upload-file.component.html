@@ -1,1 +1,12 @@
 <p>upload-file works!</p>
+
+<span *ngIf="!fileResponse">
+    <input type="file" (input)="selectFile($event.target)"><br>
+    <button (click)="upload()">Upload</button>
+</span>
+<span *ngIf="fileResponse">
+    <button (click)="fileResponse=null">Upload Again</button><br>
+    Click 
+    <a href="{{fileResponse.file.path}}" target="_blank">here</a>
+    to see the uploaded file
+</span>
