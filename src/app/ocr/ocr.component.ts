@@ -7,14 +7,17 @@ import axios from 'axios';
   styleUrls: ['./ocr.component.css']
 })
 export class OcrComponent {
+  url: string = '';
   text: string = '';
 
   selectFile(event: Event['target']) {
-    console.log(event);
+
   }
 
   async extract() {
-    const response = await axios.post('http://localhost:4000/ocr');
-    this.text = response.data.text;
+    const response = await axios.post('http://localhost:4000/ocr', {
+      url: this.url,
+    });
+    this.text = response.data.data;
   }
 }
