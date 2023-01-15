@@ -1,1 +1,5 @@
-<p>generate-qr works!</p>
+<label for="search"></label>
+<input type="text" id="search" [(ngModel)]="search">
+<button (click)="generateQr()">Generate QR Link</button>
+<br><br>
+<img *ngIf="qr" src="{{qr}}" alt="qr" srcset="">

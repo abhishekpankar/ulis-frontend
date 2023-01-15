@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import axios from 'axios';
 
 @Component({
   selector: 'app-generate-encrypted-qr',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./generate-encrypted-qr.component.css']
 })
 export class GenerateEncryptedQrComponent {
-
+  qr?: any
+  async generateQr() {
+    const response = await axios.get('http://localhost:4000/qr/generate/data');
+    this.qr = response.data;
+  }
 }

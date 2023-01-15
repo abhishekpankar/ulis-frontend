@@ -1,1 +1,3 @@
-<p>generate-encrypted-qr works!</p>
+<button (click)="generateQr()">Generate Static QR</button>
+<br><br>
+<img *ngIf="qr" src="{{qr}}" alt="qr" srcset="">

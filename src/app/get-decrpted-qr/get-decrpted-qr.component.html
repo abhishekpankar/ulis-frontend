@@ -1,1 +1,7 @@
-<p>get-decrpted-qr works!</p>
+Encrypted Text: <br>
+<textarea name="" id="" cols="30" rows="5" [(ngModel)]="encryptedData"></textarea>
+<br>
+<button (click)="getDecryptedData()">Decrypt</button>
+<br><br>
+Decrypted Data: <br>
+{{decryptedData}}
