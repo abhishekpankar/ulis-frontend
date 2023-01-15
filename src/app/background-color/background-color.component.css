@@ -1,0 +1,10 @@
+.pink-box {
+    background-color: #e09d9b;
+}
+
+.white-box {
+    background-color: rgb(220, 220, 220);
+}
+.pink-box, .white-box{
+    padding: 0px 24px;
+}
